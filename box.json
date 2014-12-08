@@ -8,5 +8,8 @@
 		"src"
 	],
 	"output": "target/phalcon-cli-mail-sender-@git-version@.phar",
+	"replacements": {
+		"manifest_url": "http://nise-nabe.github.io/phalcon-cli-mail-sender/manifest.json"
+	},
 	"intercept": true
 }
