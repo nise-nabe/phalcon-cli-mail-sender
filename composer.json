@@ -1,6 +1,7 @@
 {
     "require": {
-        "herrera-io/phar-update": "1.*"
+        "herrera-io/phar-update": "1.*",
+        "swiftmailer/swiftmailer": "@stable"
     },
     "require-dev": {
         "kherge/box": "~2.0"

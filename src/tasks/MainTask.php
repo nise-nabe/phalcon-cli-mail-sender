@@ -3,6 +3,14 @@
 class MainTask extends \Phalcon\CLI\Task
 {
     public function mainAction() {
-        echo "\nThis is the default task and the default action \n";
+        $users = \User::find();
+        foreach ($users as $user) {
+            $message = Swift_Message::newInstance('From Phalcon CLI')
+                ->setFrom(array('hoge@example.com' => 'Hoge Hoge'))
+                ->setTo(array($user->email, $user->email => $user->name))
+                ->setBody('Hey '.$user->name.'!')
+                ;
+            $this->mailer->send($message);
+        }
     }
 }

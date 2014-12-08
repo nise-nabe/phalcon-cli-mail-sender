@@ -1,6 +1,7 @@
 <?php
 
-$composerDir = APPLICATION_PATH.'/vendor/composer/';
+
+require APPLICATION_PATH.'/vendor/autoload.php';
 
 $loader = new \Phalcon\Loader();
 
@@ -14,11 +15,6 @@ $eventsManager->attach('loader', function($event, $loader, $path) {
     }
 });
 $loader->setEventsManager($eventsManager);
-
-// composer
-$loader->registerClasses(
-    require($composerDir.'autoload_classmap.php')
-);
 
 // tasks
 $loader->registerDirs([

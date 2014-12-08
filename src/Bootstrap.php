@@ -19,5 +19,12 @@ class Bootstrap extends ConsoleApp
             ));
             return $db;
         });
+
+        $di->set('mailer', function() {
+            $transport = Swift_MailTransport::newInstance();
+            $mailer = Swift_Mailer::newInstance($transport);
+
+            return $mailer;
+        }, true);
     }
 }
