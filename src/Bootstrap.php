@@ -2,6 +2,7 @@
 
 use Phalcon\CLI\Console as ConsoleApp;
 use Phalcon\Db\Adapter\Pdo\Mysql as DbAdapter;
+use Phalcon\Events\Manager as EventsManager;
 
 class Bootstrap extends ConsoleApp
 {
@@ -25,6 +26,20 @@ class Bootstrap extends ConsoleApp
             $mailer = Swift_Mailer::newInstance($transport);
 
             return $mailer;
+        }, true);
+
+        $di->set('logger', function() {
+            $logger = new \Phalcon\Logger\Adapter\Stream("php://stdout");
+            return $logger;
+        }, true);
+
+        $di->set('dispatcher', function() {
+                $eventsManager = new EventsManager();
+                $eventsManager->attach('dispatch', new \TaskLogListener());
+
+                $dispatcher = new \Phalcon\CLI\Dispatcher();
+                $dispatcher->setEventsManager($eventsManager);
+                return $dispatcher;
         }, true);
     }
 }
