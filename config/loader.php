@@ -22,7 +22,7 @@ $loader->registerClasses(
 
 // tasks
 $loader->registerDirs([
-    APPLICATION_PATH.'/tasks'
+    APPLICATION_PATH.'/src'
 ]);
 
 $loader->register();

@@ -5,7 +5,7 @@
 	"directories": [
 		"vendor",
 		"config",
-		"tasks"
+		"src"
 	],
 	"output": "target/phalcon-mail-sender-@git-version@.phar",
 	"intercept": true
