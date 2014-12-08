@@ -7,7 +7,8 @@ class UpdateTask extends \Phalcon\CLI\Task
 {
     const MANIFEST_FILE = '@manifest_url@';
 
-    public function mainAction() {
+    public function mainAction()
+    {
         $manager = new Manager(Manifest::loadFile(self::MANIFEST_FILE));
         $manager->update(VERSION, true);
     }
