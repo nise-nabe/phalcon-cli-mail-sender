@@ -2,7 +2,7 @@
 
 use Phalcon\DI\FactoryDefault\CLI as CliDI;
 
-define('VERSION', '@package_version@');
+define('VERSION', '@package-version@');
 
 $di = new CliDI();
 
