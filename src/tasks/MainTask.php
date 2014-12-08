@@ -10,7 +10,10 @@ class MainTask extends \Phalcon\CLI\Task
                 ->setTo(array($user->email, $user->email => $user->name))
                 ->setBody('Hey '.$user->name.'!')
                 ;
-            $this->mailer->send($message);
+            $result = $this->mailer->send($message);
+            if ($result <= 0) {
+                $this->logger->error(sprintf('fail to send: {name=%s, email=%s}', $user->name, $user->email));
+            }
         }
     }
 }
