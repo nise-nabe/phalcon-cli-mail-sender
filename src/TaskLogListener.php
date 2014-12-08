@@ -24,7 +24,7 @@ class TaskLogListener
         $task = $dispatcher->getTaskName();
         $action = $dispatcher->getActionName();
         $message = sprintf('%s#%s: aborted: "%s"', $task, $action, $ex->getMessage());
-        $di['loger']->error($message);
+        $di['logger']->error($message);
         return false;
     }
 }
