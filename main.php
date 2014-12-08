@@ -8,8 +8,7 @@ define('VERSION', '0.0.1');
 $di = new CliDI();
 
 // Define path to application directory
-defined('APPLICATION_PATH')
-    || define('APPLICATION_PATH', realpath(dirname(__FILE__)));
+defined('APPLICATION_PATH') || define('APPLICATION_PATH',  __DIR__);
 
 // autoload
 include APPLICATION_PATH.'/config/loader.php';
