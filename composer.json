@@ -1,0 +1,8 @@
+{
+    "require": {
+        "herrera-io/phar-update": "1.*"
+    },
+    "require-dev": {
+        "kherge/box": "~2.0"
+    }
+}
