@@ -7,6 +7,6 @@
 		"config",
 		"src"
 	],
-	"output": "target/phalcon-mail-sender-@git-version@.phar",
+	"output": "target/phalcon-cli-mail-sender-@git-version@.phar",
 	"intercept": true
 }
