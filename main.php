@@ -1,7 +1,6 @@
 <?php
 
-use Phalcon\DI\FactoryDefault\CLI as CliDI,
-    Phalcon\CLI\Console as ConsoleApp;
+use Phalcon\DI\FactoryDefault\CLI as CliDI;
 
 define('VERSION', '0.0.1');
 
@@ -20,8 +19,7 @@ if(is_readable(APPLICATION_PATH.'/config/config.php')) {
 }
 
 //Create a console application
-$console = new ConsoleApp();
-$console->setDI($di);
+$console = new Bootstrap($di);
 
 /**
  * Process the console arguments
