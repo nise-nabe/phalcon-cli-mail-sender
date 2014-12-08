@@ -1,8 +1,8 @@
 [
     {
         "name": "phalcon-cli-mail-sender.phar",
-        "sha1": "1497e768a99093ae4d35d0738347b27174f2b38f",
-        "url": "https://github.com/nise-nabe/phalcon-cli-mail-sender/releases/download/v1.0.0/phalcon-cli-mail-sender-v1.0.0.phar",
-        "version": "1.0.0"
+        "sha1": "bf1426da9fe39819e30d27836cbf4be484add043",
+        "url": "https://github.com/nise-nabe/phalcon-cli-mail-sender/releases/download/2.0.0/phalcon-cli-mail-sender-2.0.0.phar",
+        "version": "2.0.0"
     }
 ]
