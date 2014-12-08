@@ -9,4 +9,8 @@ return new \Phalcon\Config(array(
         'dbname'   => '',
         'charset'  => 'utf8mb4',
     ),
+    'mail' => array(
+        'from' => 'hoge@example.com',
+        'fromName' => 'Hoge Fuga',
+    ),
 ));

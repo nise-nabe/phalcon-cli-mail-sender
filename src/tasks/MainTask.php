@@ -6,7 +6,7 @@ class MainTask extends \Phalcon\CLI\Task
         $users = \User::find();
         foreach ($users as $user) {
             $message = Swift_Message::newInstance('From Phalcon CLI')
-                ->setFrom(array('hoge@example.com' => 'Hoge Hoge'))
+                ->setFrom(array($this->config->mail->from => $this->config->mail->fromName))
                 ->setTo(array($user->email, $user->email => $user->name))
                 ->setBody('Hey '.$user->name.'!')
                 ;
